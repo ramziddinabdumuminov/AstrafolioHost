@@ -1,0 +1,6 @@
+{
+  "name": "Astrafolio",
+  "description": "Professional Cloud Hosting va Dasturchilar Platformasi — Kodingizdan Cloudgacha.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

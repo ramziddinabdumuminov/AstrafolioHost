@@ -1,0 +1,758 @@
+{
+  "users": [
+    {
+      "id": "usr_owner_01",
+      "firstName": "Ramziddin",
+      "lastName": "A.",
+      "email": "aramziddin1978@gmail.com",
+      "phone": "+998 90 123 45 67",
+      "role": "super_admin",
+      "isVerified": true,
+      "twoFactorEnabled": true,
+      "createdAt": "2026-01-10T10:00:00Z",
+      "token": "tok_real_astrafolio_session_2026"
+    },
+    {
+      "id": "usr_admin_01",
+      "firstName": "Akmal",
+      "lastName": "Nazarov",
+      "email": "admin@astrafolio.uz",
+      "phone": "+998 99 987 65 43",
+      "role": "super_admin",
+      "isVerified": true,
+      "twoFactorEnabled": true,
+      "createdAt": "2025-12-01T08:00:00Z",
+      "token": "tok_admin_master_astrafolio"
+    }
+  ],
+  "subscription": {
+    "planId": "pro",
+    "status": "ACTIVE",
+    "startDate": "2026-02-01",
+    "nextBillingDate": "2026-10-01",
+    "autoRenew": true,
+    "priceUzs": 49000,
+    "cycle": "monthly"
+  },
+  "websites": [
+    {
+      "id": "site_01",
+      "name": "E-Bozor Do'koni",
+      "slug": "ebozor",
+      "domain": "ebozor-test.uz",
+      "runtime": "nodejs",
+      "runtimeVersion": "Node.js 20 LTS",
+      "region": "Tashkent (UZ-1)",
+      "serverNodeId": "srv_01",
+      "status": "RUNNING",
+      "sslActive": true,
+      "port": 3001,
+      "cpuPercent": 1.8,
+      "ramMb": 156,
+      "storageMb": 420,
+      "visitsMonth": 14250,
+      "gitRepo": "https://github.com/astrafolio/ebozor-nextjs",
+      "gitBranch": "main",
+      "autoDeploy": true,
+      "buildCommand": "npm run build",
+      "startCommand": "npm start",
+      "envVars": {
+        "NODE_ENV": "production",
+        "DATABASE_URL": "postgresql://astra_usr:secret@srv-db1.astrafolio.uz:5432/ebozor_prod",
+        "REDIS_URL": "redis://default:token@srv-cache1.astrafolio.uz:6379"
+      },
+      "createdAt": "2026-02-14T09:30:00Z",
+      "updatedAt": "2026-09-10T14:22:00Z"
+    },
+    {
+      "id": "site_02",
+      "name": "Fintech Core API",
+      "slug": "fintech-api",
+      "domain": "api.fintech.uz",
+      "runtime": "python",
+      "runtimeVersion": "Python 3.12 (FastAPI)",
+      "region": "Tashkent (UZ-1)",
+      "serverNodeId": "srv_01",
+      "status": "RUNNING",
+      "sslActive": true,
+      "port": 8000,
+      "cpuPercent": 3.4,
+      "ramMb": 248,
+      "storageMb": 850,
+      "visitsMonth": 48900,
+      "gitRepo": "https://github.com/astrafolio/fintech-core-api",
+      "gitBranch": "prod",
+      "autoDeploy": true,
+      "buildCommand": "pip install -r requirements.txt",
+      "startCommand": "uvicorn main:app --host 0.0.0.0 --port 8000",
+      "envVars": {
+        "ENVIRONMENT": "production",
+        "DEBUG": "False",
+        "SECRET_KEY": "astra_sec_99482751048"
+      },
+      "createdAt": "2026-03-01T12:00:00Z",
+      "updatedAt": "2026-09-11T16:45:00Z"
+    },
+    {
+      "id": "site_03",
+      "name": "Astrafolio Promo Page",
+      "slug": "promo-page",
+      "domain": "promo.astrafolio.uz",
+      "runtime": "static",
+      "runtimeVersion": "HTML5 / Nginx",
+      "region": "Frankfurt (EU-1)",
+      "serverNodeId": "srv_03",
+      "status": "RUNNING",
+      "sslActive": true,
+      "port": 80,
+      "cpuPercent": 0.2,
+      "ramMb": 32,
+      "storageMb": 85,
+      "visitsMonth": 8300,
+      "autoDeploy": false,
+      "envVars": {},
+      "createdAt": "2026-05-18T11:15:00Z",
+      "updatedAt": "2026-08-20T10:00:00Z"
+    }
+  ],
+  "domains": [
+    {
+      "id": "dom_mtzbkbqt",
+      "name": "ebozor-test.uz",
+      "isCustom": true,
+      "status": "ACTIVE",
+      "verified": true,
+      "sslActive": true,
+      "sslExpiresAt": "2026-12-12T04:33:58.133Z",
+      "registeredVia": "astrafolio",
+      "registrar": "Astrafolio / CCTLD.UZ Rasmiy Registrator",
+      "periodYears": 1,
+      "pricePerYear": 25000,
+      "totalPaidUzs": 25000,
+      "paymentMethod": "BALANCE",
+      "paymentStatus": "PAID",
+      "autoRenew": true,
+      "privacyProtection": true,
+      "linkedWebsiteId": "site_01",
+      "linkedWebsiteName": "E-Bozor Do'koni",
+      "createdAt": "2026-09-13T04:33:58.133Z",
+      "expiresAt": "2027-09-13T04:33:58.133Z",
+      "nameservers": [
+        "ns1.astrafolio.uz",
+        "ns2.astrafolio.uz"
+      ],
+      "verificationToken": "astra_token_fsv2xf7i",
+      "registrant": {
+        "name": "Ramziddin A.",
+        "email": "aramziddin1978@gmail.com",
+        "phone": "+998901234567",
+        "pinflOrPassport": "31508920140023"
+      },
+      "dnsRecords": [
+        {
+          "id": "dns_1789274038134_1",
+          "type": "A",
+          "name": "@",
+          "value": "185.196.220.14",
+          "ttl": 3600
+        },
+        {
+          "id": "dns_1789274038134_2",
+          "type": "CNAME",
+          "name": "www",
+          "value": "ebozor-test.uz",
+          "ttl": 3600
+        },
+        {
+          "id": "dns_1789274038134_3",
+          "type": "MX",
+          "name": "@",
+          "value": "mail.astrafolio.uz",
+          "ttl": 3600,
+          "priority": 10
+        },
+        {
+          "id": "dns_1789274038134_4",
+          "type": "TXT",
+          "name": "@",
+          "value": "v=spf1 include:_spf.astrafolio.uz ~all",
+          "ttl": 3600
+        },
+        {
+          "id": "dns_1789274038134_5",
+          "type": "NS",
+          "name": "@",
+          "value": "ns1.astrafolio.uz",
+          "ttl": 86400
+        },
+        {
+          "id": "dns_1789274038134_6",
+          "type": "NS",
+          "name": "@",
+          "value": "ns2.astrafolio.uz",
+          "ttl": 86400
+        }
+      ]
+    },
+    {
+      "id": "dom_01",
+      "name": "ebozor.astrafolio.uz",
+      "isCustom": false,
+      "status": "ACTIVE",
+      "verified": true,
+      "sslActive": true,
+      "linkedWebsiteId": "site_01",
+      "linkedWebsiteName": "E-Bozor Do'koni",
+      "createdAt": "2026-02-14T09:30:00Z",
+      "dnsRecords": [
+        {
+          "id": "dns_1",
+          "type": "A",
+          "name": "@",
+          "value": "185.196.220.14",
+          "ttl": 3600
+        },
+        {
+          "id": "dns_2",
+          "type": "CNAME",
+          "name": "www",
+          "value": "ebozor.astrafolio.uz",
+          "ttl": 3600
+        }
+      ]
+    },
+    {
+      "id": "dom_02",
+      "name": "api.fintech.uz",
+      "isCustom": true,
+      "status": "ACTIVE",
+      "verified": true,
+      "sslActive": true,
+      "linkedWebsiteId": "site_02",
+      "linkedWebsiteName": "Fintech Core API",
+      "createdAt": "2026-03-01T12:00:00Z",
+      "dnsRecords": [
+        {
+          "id": "dns_3",
+          "type": "A",
+          "name": "api",
+          "value": "185.196.220.14",
+          "ttl": 3600
+        },
+        {
+          "id": "dns_4",
+          "type": "TXT",
+          "name": "_astrafolio-challenge",
+          "value": "astra-verify-49281a9f-88b1",
+          "ttl": 300
+        }
+      ]
+    },
+    {
+      "id": "dom_03",
+      "name": "mycompany.uz",
+      "isCustom": true,
+      "status": "PENDING_DNS",
+      "verified": false,
+      "sslActive": false,
+      "createdAt": "2026-09-12T05:00:00Z",
+      "verificationToken": "astra-verify-9821ef44",
+      "dnsRecords": [
+        {
+          "id": "dns_5",
+          "type": "A",
+          "name": "@",
+          "value": "185.196.220.14",
+          "ttl": 3600
+        },
+        {
+          "id": "dns_6",
+          "type": "TXT",
+          "name": "_astrafolio-challenge",
+          "value": "astra-verify-9821ef44",
+          "ttl": 300
+        }
+      ]
+    }
+  ],
+  "files": {
+    "site_01": [
+      {
+        "id": "f_1",
+        "websiteId": "site_01",
+        "path": "/index.js",
+        "name": "index.js",
+        "type": "file",
+        "sizeBytes": 1420,
+        "updatedAt": "2026-09-10T14:22:00Z",
+        "extension": "js",
+        "content": "// E-Bozor Express Server\nconst express = require('express');\nconst app = express();\nconst PORT = process.env.PORT || 3001;\n\napp.use(express.json());\n\napp.get('/api/health', (req, res) => {\n  res.json({ status: 'ok', service: 'E-Bozor API', timestamp: new Date().toISOString() });\n});\n\napp.get('/api/products', (req, res) => {\n  res.json([\n    { id: 1, name: 'MacBook Pro M4', price: 22000000, inStock: true },\n    { id: 2, name: 'iPhone 17 Pro', price: 16500000, inStock: true },\n    { id: 3, name: 'AirPods Pro 3', price: 3200000, inStock: false }\n  ]);\n});\n\napp.listen(PORT, () => {\n  console.log('E-Bozor server running on port ' + PORT);\n});"
+      },
+      {
+        "id": "f_2",
+        "websiteId": "site_01",
+        "path": "/package.json",
+        "name": "package.json",
+        "type": "file",
+        "sizeBytes": 520,
+        "updatedAt": "2026-09-08T11:00:00Z",
+        "extension": "json",
+        "content": "{\n  \"name\": \"ebozor-backend\",\n  \"version\": \"1.0.0\",\n  \"main\": \"index.js\",\n  \"scripts\": {\n    \"start\": \"node index.js\",\n    \"build\": \"echo 'Build finished'\"\n  },\n  \"dependencies\": {\n    \"express\": \"^4.21.0\"\n  }\n}"
+      },
+      {
+        "id": "f_3",
+        "websiteId": "site_01",
+        "path": "/.env",
+        "name": ".env",
+        "type": "file",
+        "sizeBytes": 180,
+        "updatedAt": "2026-09-05T08:12:00Z",
+        "extension": "env",
+        "content": "PORT=3001\nNODE_ENV=production\nDATABASE_URL=postgresql://astra_usr:secret@srv-db1.astrafolio.uz:5432/ebozor_prod"
+      },
+      {
+        "id": "f_4",
+        "websiteId": "site_01",
+        "path": "/public",
+        "name": "public",
+        "type": "folder",
+        "sizeBytes": 0,
+        "updatedAt": "2026-09-01T10:00:00Z"
+      },
+      {
+        "id": "f_5",
+        "websiteId": "site_01",
+        "path": "/public/styles.css",
+        "name": "styles.css",
+        "type": "file",
+        "sizeBytes": 640,
+        "updatedAt": "2026-09-01T10:00:00Z",
+        "extension": "css",
+        "content": "body { font-family: sans-serif; background: #0b0f19; color: #f1f5f9; padding: 2rem; }\nh1 { color: #06b6d4; }"
+      }
+    ]
+  },
+  "databases": [
+    {
+      "id": "db_01",
+      "name": "ebozor_prod",
+      "type": "postgresql",
+      "version": "PostgreSQL 16.2",
+      "host": "pg-pool-01.astrafolio.uz",
+      "port": 5432,
+      "username": "astra_usr_ebozor",
+      "status": "ONLINE",
+      "sizeMb": 142,
+      "maxSizeMb": 10240,
+      "tablesCount": 18,
+      "linkedWebsiteId": "site_01",
+      "createdAt": "2026-02-14T09:40:00Z"
+    },
+    {
+      "id": "db_02",
+      "name": "fintech_vault",
+      "type": "postgresql",
+      "version": "PostgreSQL 16.2",
+      "host": "pg-pool-01.astrafolio.uz",
+      "port": 5432,
+      "username": "astra_usr_fintech",
+      "status": "ONLINE",
+      "sizeMb": 380,
+      "maxSizeMb": 25600,
+      "tablesCount": 34,
+      "linkedWebsiteId": "site_02",
+      "createdAt": "2026-03-01T12:15:00Z"
+    }
+  ],
+  "sslCerts": [
+    {
+      "id": "ssl_01",
+      "domain": "ebozor.astrafolio.uz",
+      "issuer": "Let's Encrypt Authority R3",
+      "status": "ACTIVE",
+      "validFrom": "2026-08-01",
+      "validUntil": "2026-11-01",
+      "autoRenew": true,
+      "fingerprint": "SHA256:7F:8E:22:1A:BC:99:34:E1:02",
+      "algorithm": "ECDSA 256-bit"
+    },
+    {
+      "id": "ssl_02",
+      "domain": "api.fintech.uz",
+      "issuer": "Let's Encrypt Authority R3",
+      "status": "ACTIVE",
+      "validFrom": "2026-07-15",
+      "validUntil": "2026-10-15",
+      "autoRenew": true,
+      "fingerprint": "SHA256:4C:12:9A:88:FF:55:01:23:4B",
+      "algorithm": "ECDSA 256-bit"
+    }
+  ],
+  "deployments": [
+    {
+      "id": "dep_01",
+      "websiteId": "site_01",
+      "websiteName": "E-Bozor Do'koni",
+      "commitHash": "7b4f2c1",
+      "commitMessage": "feat: Payme va Click to'lov tizimlari integratsiyasi",
+      "branch": "main",
+      "author": "Sardor Rahimov",
+      "status": "SUCCESS",
+      "startedAt": "2026-09-10T14:20:00Z",
+      "finishedAt": "2026-09-10T14:22:14Z",
+      "duration": "2m 14s",
+      "stages": [
+        {
+          "name": "Repository Clone",
+          "status": "SUCCESS",
+          "durationMs": 4200
+        },
+        {
+          "name": "Dependencies Install",
+          "status": "SUCCESS",
+          "durationMs": 45000
+        },
+        {
+          "name": "Vite Production Build",
+          "status": "SUCCESS",
+          "durationMs": 38000
+        },
+        {
+          "name": "Unit & E2E Tests",
+          "status": "SUCCESS",
+          "durationMs": 18000
+        },
+        {
+          "name": "Astra WAF Security Scan",
+          "status": "SUCCESS",
+          "durationMs": 9000
+        },
+        {
+          "name": "Rolling Zero-Downtime Deploy",
+          "status": "SUCCESS",
+          "durationMs": 19800
+        }
+      ],
+      "logs": [
+        "[00:00] Git clone https://github.com/astrafolio/ebozor-nextjs branch: main",
+        "[00:04] Resolving dependencies from package-lock.json...",
+        "[00:15] Installed 342 packages in 11.2s",
+        "[00:49] Running Next.js build: generating static pages (14/14)",
+        "[01:27] Build artifact generated: dist/app.bundle.js (340KB)",
+        "[01:45] Security scan: 0 critical vulnerabilities found",
+        "[02:05] Starting new container instance on Server 01 (Tashkent)",
+        "[02:14] Health check passed (HTTP 200). Traffic switched smoothly."
+      ]
+    },
+    {
+      "id": "dep_02",
+      "websiteId": "site_02",
+      "websiteName": "Fintech Core API",
+      "commitHash": "9a180f3",
+      "commitMessage": "refactor: JWT auth caching optimallashtirildi",
+      "branch": "prod",
+      "author": "Sardor Rahimov",
+      "status": "SUCCESS",
+      "startedAt": "2026-09-11T16:42:00Z",
+      "finishedAt": "2026-09-11T16:44:02Z",
+      "duration": "2m 02s",
+      "stages": [
+        {
+          "name": "Repository Clone",
+          "status": "SUCCESS",
+          "durationMs": 3500
+        },
+        {
+          "name": "Dependencies Install",
+          "status": "SUCCESS",
+          "durationMs": 32000
+        },
+        {
+          "name": "Vite Production Build",
+          "status": "SUCCESS",
+          "durationMs": 25000
+        },
+        {
+          "name": "Unit & E2E Tests",
+          "status": "SUCCESS",
+          "durationMs": 22000
+        },
+        {
+          "name": "Astra WAF Security Scan",
+          "status": "SUCCESS",
+          "durationMs": 8000
+        },
+        {
+          "name": "Rolling Zero-Downtime Deploy",
+          "status": "SUCCESS",
+          "durationMs": 31500
+        }
+      ],
+      "logs": [
+        "[00:00] Clone completed at rev 9a180f3",
+        "[00:32] Pip packages verified against wheels cache",
+        "[01:21] Pytest suites: 62 passed in 14.8s",
+        "[01:30] Astra Security audit: OWASP compliance level A+",
+        "[02:02] API container restart: 0 failed requests during switch"
+      ]
+    }
+  ],
+  "backups": [
+    {
+      "id": "bkp_01",
+      "websiteId": "site_01",
+      "websiteName": "E-Bozor Do'koni",
+      "type": "Full Website",
+      "sizeMb": 562,
+      "checksum": "sha256:88a31dfb192305ca7",
+      "status": "COMPLETED",
+      "isAutomated": true,
+      "createdAt": "2026-09-12T02:00:00Z"
+    },
+    {
+      "id": "bkp_02",
+      "websiteId": "site_02",
+      "websiteName": "Fintech Core API",
+      "type": "Database Dump",
+      "sizeMb": 382,
+      "checksum": "sha256:4490fba98162e20b3",
+      "status": "COMPLETED",
+      "isAutomated": true,
+      "createdAt": "2026-09-12T03:00:00Z"
+    }
+  ],
+  "cronJobs": [
+    {
+      "id": "cron_01",
+      "name": "Database Session Tozalash",
+      "websiteId": "site_01",
+      "websiteName": "E-Bozor Do'koni",
+      "command": "node scripts/clean-sessions.js",
+      "schedule": "0 0 * * *",
+      "description": "Har kecha 00:00 da muddati o'tgan sessiyalarni o'chiradi",
+      "status": "ACTIVE",
+      "lastRun": "2026-09-12T00:00:00Z",
+      "lastRunStatus": "SUCCESS",
+      "nextRun": "2026-09-13T00:00:00Z"
+    },
+    {
+      "id": "cron_02",
+      "name": "Valyuta Kurslarini Yangilash",
+      "websiteId": "site_02",
+      "websiteName": "Fintech Core API",
+      "command": "python -m jobs.sync_currency",
+      "schedule": "*/15 * * * *",
+      "description": "Har 15 daqiqada Markaziy Bank kurslarini sinxronlaydi",
+      "status": "ACTIVE",
+      "lastRun": "2026-09-12T20:00:00Z",
+      "lastRunStatus": "SUCCESS",
+      "nextRun": "2026-09-12T20:15:00Z"
+    }
+  ],
+  "tickets": [
+    {
+      "id": "tkt_01",
+      "ticketNumber": "AST-84920",
+      "userId": "usr_owner_01",
+      "userEmail": "aramziddin1978@gmail.com",
+      "subject": "Custom domain SSL sertifikati holati bo'yicha savol",
+      "category": "SSL",
+      "priority": "NORMAL",
+      "status": "RESOLVED",
+      "createdAt": "2026-09-08T11:20:00Z",
+      "updatedAt": "2026-09-08T12:05:00Z",
+      "messages": [
+        {
+          "id": "msg_1",
+          "sender": "Ramziddin A.",
+          "senderRole": "user",
+          "content": "Assalomu alaykum! api.fintech.uz domenimga Let's Encrypt sertifikati qancha vaqt ichida aktivlashadi?",
+          "timestamp": "2026-09-08T11:20:00Z"
+        },
+        {
+          "id": "msg_2",
+          "sender": "Astrafolio Support (Javohir)",
+          "senderRole": "support",
+          "content": "Va alaykum assalom, Sardor! DNS tekshiruvi TXT yozuv orqali muvaffaqiyatli yakunlandi. Sertifikat allaqachon avtomatik generatsiya qilinib, Nginx reverse proxy'ga ulandi. Saytingiz HTTPS orqali to'liq xavfsiz ishlamoqda.",
+          "timestamp": "2026-09-08T12:05:00Z"
+        }
+      ]
+    }
+  ],
+  "notifications": [
+    {
+      "id": "notif_1789274038150",
+      "title": "Domen muvaffaqiyatli ro'yxatdan o'tdi",
+      "message": "ebozor-test.uz domeni 1 yil muddatga faollashtirildi. Anycast DNS va Let's Encrypt SSL avtomatik ishga tushirildi.",
+      "type": "SUCCESS",
+      "read": false,
+      "createdAt": "2026-09-13T04:33:58.133Z"
+    },
+    {
+      "id": "notif_01",
+      "title": "Deploy muvaffaqiyatli yakunlandi",
+      "message": "E-Bozor Do'koni (7b4f2c1) loyihasi Server 01 (Tashkent) ga deploy qilindi.",
+      "type": "DEPLOY",
+      "severity": "success",
+      "isRead": false,
+      "timestamp": "2026-09-10T14:22:15Z"
+    },
+    {
+      "id": "notif_02",
+      "title": "Tungi avtomatik backup olindi",
+      "message": "site_01 va site_02 uchun to'liq NVMe zaxira nusxasi S3 shifrlangan saqlagichga yuklandi.",
+      "type": "BACKUP",
+      "severity": "info",
+      "isRead": false,
+      "timestamp": "2026-09-12T03:00:10Z"
+    },
+    {
+      "id": "notif_03",
+      "title": "WAF: 14 ta shubhali so'rov bloklandi",
+      "message": "api.fintech.uz domeniga qaratilgan SQL Injection urinishlari bartaraf etildi.",
+      "type": "SECURITY",
+      "severity": "warning",
+      "isRead": true,
+      "timestamp": "2026-09-11T22:15:00Z"
+    }
+  ],
+  "auditLogs": [
+    {
+      "id": "log_1789274038134",
+      "action": "DOMAIN_PURCHASE",
+      "description": "Yangi domen ro'yxatdan o'tkazildi: ebozor-test.uz (1 yil, 25,000 so'm, To'lov: BALANCE)",
+      "userEmail": "aramziddin1978@gmail.com",
+      "ipAddress": "185.196.220.14",
+      "timestamp": "2026-09-13T04:33:58.133Z"
+    },
+    {
+      "id": "aud_01",
+      "userEmail": "aramziddin1978@gmail.com",
+      "action": "DEPLOY_TRIGGER",
+      "resource": "E-Bozor Do'koni (site_01)",
+      "ip": "84.54.72.102 (Tashkent, UZ)",
+      "status": "SUCCESS",
+      "timestamp": "2026-09-10T14:20:00Z"
+    },
+    {
+      "id": "aud_02",
+      "userEmail": "aramziddin1978@gmail.com",
+      "action": "ENV_VARIABLE_UPDATE",
+      "resource": "Fintech Core API (site_02)",
+      "ip": "84.54.72.102 (Tashkent, UZ)",
+      "status": "SUCCESS",
+      "timestamp": "2026-09-11T16:40:00Z"
+    },
+    {
+      "id": "aud_03",
+      "userEmail": "system",
+      "action": "AUTO_BACKUP_S3",
+      "resource": "site_01_full_snapshot",
+      "ip": "127.0.0.1 (Internal Worker)",
+      "status": "SUCCESS",
+      "timestamp": "2026-09-12T02:00:00Z"
+    }
+  ],
+  "wafRules": [
+    {
+      "id": "waf_1",
+      "code": "RULE_SQLI",
+      "name": "SQL Injection Himoyasi",
+      "description": "URL parametrlari va JSON body'dagi zararli SQL so'rovlarni bloklaydi",
+      "category": "OWASP Top 10",
+      "enabled": true,
+      "blockedAttempts": 24,
+      "severity": "CRITICAL"
+    },
+    {
+      "id": "waf_2",
+      "code": "RULE_XSS",
+      "name": "Cross-Site Scripting (XSS)",
+      "description": "Mijoz brauzeriga zararli script inyeksiyalarini filtrlaydi",
+      "category": "OWASP Top 10",
+      "enabled": true,
+      "blockedAttempts": 18,
+      "severity": "HIGH"
+    },
+    {
+      "id": "waf_3",
+      "code": "RULE_PATH_TRAVERSAL",
+      "name": "Path Traversal & LFI",
+      "description": "Server ichidagi maxfiy fayllarga ../ yo'llar bilan kirishni to'xtatadi",
+      "category": "Filesystem",
+      "enabled": true,
+      "blockedAttempts": 41,
+      "severity": "CRITICAL"
+    },
+    {
+      "id": "waf_4",
+      "code": "RULE_RATE_LIMIT",
+      "name": "DDoS & Brute-Force Rate Limiter",
+      "description": "IP manziliga soniyasiga 60 ta so'rovdan ortiq yuklamani cheklaydi",
+      "category": "Network",
+      "enabled": true,
+      "blockedAttempts": 156,
+      "severity": "HIGH"
+    },
+    {
+      "id": "waf_5",
+      "code": "RULE_COMMAND_INJECTION",
+      "name": "Remote Command Execution (RCE)",
+      "description": "Shell komandalarini yashirin kiritish urinishlarini uzadi",
+      "category": "System",
+      "enabled": true,
+      "blockedAttempts": 9,
+      "severity": "CRITICAL"
+    }
+  ],
+  "servers": [
+    {
+      "id": "srv_01",
+      "name": "Server 01 (Master Node)",
+      "hostname": "node-uz1.astrafolio.uz",
+      "region": "Tashkent, O'zbekiston",
+      "flag": "🇺🇿",
+      "datacenter": "Uztelecom Tier-III Datacenter",
+      "status": "HEALTHY",
+      "cpuPercent": 28,
+      "ramPercent": 44,
+      "diskPercent": 32,
+      "networkInMbps": 210,
+      "networkOutMbps": 480,
+      "activeContainers": 48,
+      "uptime": "99.98% (42 kun 14 soat)"
+    },
+    {
+      "id": "srv_02",
+      "name": "Server 02 (Worker Node)",
+      "hostname": "node-uz2.astrafolio.uz",
+      "region": "Samarqand, O'zbekiston",
+      "flag": "🇺🇿",
+      "datacenter": "Samarkand Cloud Hub",
+      "status": "HEALTHY",
+      "cpuPercent": 19,
+      "ramPercent": 36,
+      "diskPercent": 21,
+      "networkInMbps": 95,
+      "networkOutMbps": 180,
+      "activeContainers": 26,
+      "uptime": "99.95% (28 kun 08 soat)"
+    },
+    {
+      "id": "srv_03",
+      "name": "Server 03 (EU Edge Node)",
+      "hostname": "node-eu1.astrafolio.uz",
+      "region": "Frankfurt, Germaniya",
+      "flag": "🇩🇪",
+      "datacenter": "Equinix FR-2",
+      "status": "HEALTHY",
+      "cpuPercent": 38,
+      "ramPercent": 58,
+      "diskPercent": 46,
+      "networkInMbps": 440,
+      "networkOutMbps": 890,
+      "activeContainers": 62,
+      "uptime": "99.99% (94 kun 03 soat)"
+    }
+  ]
+}
